@@ -53,6 +53,8 @@ public class CreateFigure {
 
             } catch (InputMismatchException e) {
                 System.out.println("You wrote wrong format of data! Please write numbers");
+            }finally {
+                scanner.nextLine();
             }
 
         } while (true);
