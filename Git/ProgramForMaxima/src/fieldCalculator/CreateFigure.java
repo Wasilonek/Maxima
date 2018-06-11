@@ -1,6 +1,8 @@
 package fieldCalculator;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -32,7 +34,7 @@ public class CreateFigure {
         return figure;
     }
 
-    private Triangle createTriangle() {
+    public Triangle createTriangle() {
         do {
             try {
                 System.out.print("Enter a: ");
@@ -60,7 +62,7 @@ public class CreateFigure {
         } while (true);
     }
 
-    private Square createSquare() {
+    public Square createSquare() {
         do {
             try {
                 System.out.println("Enter a: ");
@@ -81,7 +83,7 @@ public class CreateFigure {
         } while (true);
     }
 
-    private Circle createCirlce() {
+    public Circle createCirlce() {
         do {
             try {
                 System.out.print("Enter radius: ");
