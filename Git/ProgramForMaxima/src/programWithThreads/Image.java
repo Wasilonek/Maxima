@@ -43,14 +43,16 @@ public class Image {
 
     public void calculateHistogram(char sign , int id){
         for(int i = 0 ; i < rowSize ; i++){
-            for (int j = 0; j < columnSize ; i++){
+            for (int j = 0; j < columnSize ; j++){
                 if(image[i][j] == sign) histogram[id]++;
             }
         }
     }
 
-    public synchronized void printHistogram(){
-        
+    synchronized public void printHistogram(char sigh , int id){
+        System.out.print( "\nThread " + id + ": " + sigh + " " );
+        for ( int i = 0; i < histogram[id]; i++ )
+            System.out.print( "=" );
     }
 
 }

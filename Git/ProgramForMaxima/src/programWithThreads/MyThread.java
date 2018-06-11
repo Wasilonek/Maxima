@@ -5,7 +5,7 @@ import org.omg.PortableInterceptor.ObjectReferenceFactory;
 /**
  * Created by Kamil on 2018-06-11.
  */
-public class MyThread implements Runnable {
+public class MyThread extends Thread {
 
     private Image image;
     private int id;
@@ -17,10 +17,9 @@ public class MyThread implements Runnable {
         this.sign = sign;
     }
 
-
-
     @Override
     public void run() {
-
+        image.calculateHistogram(sign, id);
+        image.printHistogram(sign , id);
     }
 }
